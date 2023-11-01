@@ -1,0 +1,9 @@
+nombre de feuille total = 10
+7 feuilles = paquet 
+
+10/7 nahazoana dividen 1 int le type dia tsisy virgule 
+
+valin'iny natao * 0.5 (prix paquet de feuille) -> ty ny prix anle paquet rehetra
+
++
+(nbrede feuille total % nombre paquet) * 0.10 (prix feuille ray) -> ty no ato hoe reste
