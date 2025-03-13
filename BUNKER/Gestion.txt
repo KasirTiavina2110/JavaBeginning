@@ -1,0 +1,12 @@
+Administrateur :matricule='ADM3', nom='Lee', prenom='David', sexe='M', nombreEmploye=15, secteur='Marketing', projetAffectation='Projet PRM', titre='Directeur Marketing'
+Gestionnaire :matricule='GES3', nom='Lopez', prenom='Carlos', sexe='M', dateDeNaissance=Mon Apr 28 00:00:00 EDT 1975, vivant=true, nombreEmploye=8, secteur='Secteur4'
+Gestionnaire :matricule='GES1', nom='Garcia', prenom='Maria', sexe='F', dateDeNaissance=Fri May 30 00:00:00 EDT 1975, vivant=true, nombreEmploye=6, secteur='Secteur1'
+Administrateur :matricule='ADM1', nom='Smith', prenom='John', sexe='M', nombreEmploye=10, secteur='Ressources Humaines', projetAffectation='Projet ABC', titre='Manager RH'
+Administrateur :matricule='ADM4', nom='Liu', prenom='Lin', sexe='F', nombreEmploye=8, secteur='Informatique', projetAffectation='Projet IT', titre='Chef de Projet'
+Scientifique :nombreDeProjet= 7', nombreEmploye=12', tableauDeProjet= [Projet1, Projet2, Projet3]', secteur=Secteur Recherche', matricule=SCI3', nom= Gomez', prenom=Maria', sexe=F', dateDeNaissance=Mon Dec 12 00:00:00 EST 1983', vivant=true
+Administrateur :matricule='ADM2', nom='Garcia', prenom='Maria', sexe='F', nombreEmploye=12, secteur='Finance', projetAffectation='Projet XYZ', titre='Directeur Financier'
+Gestionnaire :matricule='GES2', nom='Smith', prenom='Jane', sexe='F', dateDeNaissance=Mon Oct 12 00:00:00 EDT 1987, vivant=true, nombreEmploye=7, secteur='Secteur3'
+Scientifique :nombreDeProjet= 5', nombreEmploye=10', tableauDeProjet= [Projet1, Projet2, Projet3]', secteur=Secteur Recherche', matricule=SCI1', nom= Chang', prenom=Sophie', sexe=F', dateDeNaissance=Wed Oct 12 00:00:00 EDT 1988', vivant=true
+Scientifique :nombreDeProjet= 6', nombreEmploye=11', tableauDeProjet= [Projet1, Projet2, Projet3]', secteur=Secteur Recherche', matricule=SCI2', nom= Wang', prenom=Lin', sexe=F', dateDeNaissance=Tue Jun 20 00:00:00 EDT 1989', vivant=true
+Scientifique :nombreDeProjet= 8', nombreEmploye=13', tableauDeProjet= [Projet1, Projet2, Projet3]', secteur=Secteur Recherche', matricule=SCI4', nom= Johnson', prenom=John', sexe=M', dateDeNaissance=Thu Mar 08 00:00:00 EST 1990', vivant=true
+Gestionnaire :matricule='GES4', nom='Dubois', prenom='Pierre', sexe='M', dateDeNaissance=Thu Sep 19 00:00:00 EDT 1996, vivant=true, nombreEmploye=9, secteur='Secteur5'

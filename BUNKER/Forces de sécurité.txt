@@ -1,0 +1,16 @@
+Armee :matricule='ARM2', nom='Garcia', prenom='Maria', sexe='F', dateDeNaissance=Tue Jan 25 00:00:00 EST 1977', vivant=true
+ grade='Grade2', poste='Poste2', arme='Arme2', anneeDeService=12', nombreDeSortie=7', nombreDeVictime=3', tabMatricule=[AM1, AM2, AM3, AM4, AM5]
+Armee :matricule='ARM1', nom='Durand', prenom='Pierre', sexe='M', dateDeNaissance=Tue Dec 05 00:00:00 EST 1978', vivant=true
+ grade='Grade1', poste='Poste1', arme='Arme1', anneeDeService=15', nombreDeSortie=8', nombreDeVictime=5', tabMatricule=[AM1, AM2, AM3, AM4, AM5]
+Milice :matricule='MIL2', nom='Johnson', prenom='John', sexe='M', dateDeNaissance=Thu May 15 00:00:00 EDT 1980, vivant=true, grade='Grade2', poste='Poste2', arme='Arme2', anneeDeService=5, nombreDePlainte=2
+Milice :matricule='MIL1', nom='Lopez', prenom='Carlos', sexe='M', dateDeNaissance=Wed Aug 25 00:00:00 EDT 1982, vivant=true, grade='Grade1', poste='Poste1', arme='Arme1', anneeDeService=6, nombreDePlainte=3
+Armee :matricule='ARM4', nom='Wang', prenom='Lin', sexe='F', dateDeNaissance=Sun Jun 30 00:00:00 EDT 1985', vivant=true
+ grade='Grade4', poste='Poste4', arme='Arme4', anneeDeService=8', nombreDeSortie=6', nombreDeVictime=1', tabMatricule=[AM1, AM2, AM3, AM4, AM5]
+Force de Sécurité {matricule='FS3', nom='Lopez', prenom='Carlos', sexe='M', dateDeNaissance=Tue Sep 09 00:00:00 EDT 1986, vivant=true, grade='Grade3', poste='Poste3', arme='Arme3', anneeDeService=7}
+Force de Sécurité {matricule='FS1', nom='Dubois', prenom='Marie', sexe='F', dateDeNaissance=Sat Sep 15 00:00:00 EDT 1990, vivant=true, grade='Grade1', poste='Poste1', arme='Arme1', anneeDeService=10}
+Armee :matricule='ARM3', nom='Dubois', prenom='Pierre', sexe='M', dateDeNaissance=Mon Mar 18 00:00:00 EST 1991', vivant=true
+ grade='Grade3', poste='Poste3', arme='Arme3', anneeDeService=10', nombreDeSortie=5', nombreDeVictime=2', tabMatricule=[AM1, AM2, AM3, AM4, AM5]
+Force de Sécurité {matricule='FS2', nom='Garcia', prenom='Juan', sexe='M', dateDeNaissance=Wed Apr 15 00:00:00 EDT 1992, vivant=true, grade='Grade2', poste='Poste2', arme='Arme2', anneeDeService=8}
+Milice :matricule='MIL4', nom='Gomez', prenom='Pablo', sexe='M', dateDeNaissance=Thu Dec 10 00:00:00 EST 1992, vivant=true, grade='Grade4', poste='Poste4', arme='Arme4', anneeDeService=4, nombreDePlainte=1
+Force de Sécurité {matricule='FS4', nom='Wang', prenom='Lin', sexe='F', dateDeNaissance=Sat Dec 20 00:00:00 EST 1997, vivant=true, grade='Grade4', poste='Poste4', arme='Arme4', anneeDeService=9}
+Milice :matricule='MIL3', nom='Chang', prenom='Sophie', sexe='F', dateDeNaissance=Tue Jul 28 00:00:00 EDT 1998, vivant=true, grade='Grade3', poste='Poste3', arme='Arme3', anneeDeService=6, nombreDePlainte=3

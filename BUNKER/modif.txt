@@ -1,0 +1,233 @@
+package pkgTest;
+
+import javax.swing.*;
+
+import org.jdatepicker.impl.DateComponentFormatter;
+import org.jdatepicker.impl.JDatePanelImpl;
+import org.jdatepicker.impl.JDatePickerImpl;
+import java.awt.*;
+import java.util.Properties;
+
+public class ModificationPersonneDialog extends JDialog {
+
+    private JTextField matriculeField, nomField, prenomField, sexeField, secteurField, gradeField, posteField, armeField,
+            anneesDeServiceField, nombreEmployeField, secteurGestionField, nombreDePlainteField,
+            nombreDeSortieField, nombreVictimeField, matriculeField1, matriculeField2, matriculeField3,
+            matriculeField4, matriculeField5, nombreDeProjetField, projetField1, projetField2, projetField3,
+            projetAffectationField, titreField, specialiteField, niveauEtudeField, quartDeTravailField,
+            genreDeTravailField, nombreDeSecteurValideField;
+
+    private JComboBox<String> typePersonneBox;
+    private JPanel dateNaissancePanel;
+    private JDatePickerImpl dateNaissancePicker;
+
+    public ModificationPersonneDialog(JFrame parent) {
+        super(parent, "Modification de personne", true);
+
+        // Charger l'image de fond
+        ImageIcon backgroundImageIcon = new ImageIcon("img/simpsons.jpg");
+        Image backgroundImage = backgroundImageIcon.getImage();
+
+        // Créer un JPanel pour afficher l'image de fond
+        JPanel backgroundPanel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+            }
+        };
+        backgroundPanel.setLayout(new GridLayout(0, 2));
+
+        // Ajouter les étiquettes et les champs de texte pour les informations de base
+        addLabelAndTextField("Matricule :", matriculeField);
+        addLabelAndTextField("Nom :", nomField);
+        addLabelAndTextField("Prénom :", prenomField);
+        addLabelAndTextField("Sexe :", sexeField);
+
+        // Créer les pickers de date
+        org.jdatepicker.impl.UtilDateModel dateNaissanceModel = new org.jdatepicker.impl.UtilDateModel();
+        Properties dateNaissanceProperties = new Properties();
+        dateNaissanceProperties.put("text.today", "Aujourd'hui");
+        dateNaissanceProperties.put("text.month", "Mois");
+        dateNaissanceProperties.put("text.year", "Année");
+        dateNaissancePanel = new JDatePanelImpl(dateNaissanceModel, dateNaissanceProperties);
+        dateNaissancePicker = new JDatePickerImpl((JDatePanelImpl) dateNaissancePanel, new DateComponentFormatter());
+        addLabelAndComponent("Date de naissance:", dateNaissancePicker);
+
+        // Initialiser la liste déroulante pour le type de personne
+        add(new JLabel("Type de personne :"));
+        typePersonneBox = new JComboBox<>(new String[]{"Employé de maintenance", "Force de sécurité", "Gestionnaire", "Milice", "Armee", "Scientifique", "Administrateur", "Ingenieur", "Ouvrier"});
+        typePersonneBox.addActionListener(e -> {
+            String selectedType = (String) typePersonneBox.getSelectedItem();
+            switch (selectedType) {
+                case "Employé de maintenance":
+                    afficherChampsEmployeMaintenance();
+                    break;
+                case "Force de sécurité":
+                    afficherChampsForceSecurite();
+                    break;
+                case "Gestionnaire":
+                    afficherChampsGestionnaire();
+                    break;
+                case "Milice":
+                    afficherChampsMilice();
+                    break;
+                case "Armee":
+                    afficherChampsArmee();
+                    break;
+                case "Scientifique":
+                    afficherChampsScientifiques();
+                    break;
+                case "Administrateur":
+                    afficherChampsAdmin();
+                    break;
+                case "Ingenieur":
+                    afficherChampsIngenieur();
+                    break;
+                case "Ouvrier":
+                    afficherChampsOuvrier();
+                    break;
+                default:
+                    break;
+            }
+        });
+        add(typePersonneBox);
+
+        // Initialiser le champ secteurField
+        addTextFieldWithLabel("Secteur d'employe de Maintenance:", secteurField);
+
+        // Initialiser le champ gradeField
+        addTextFieldWithLabel("Grade :", gradeField);
+
+        // Initialiser les autres champs supplémentaires
+        addTextFieldWithLabel("Poste :", posteField);
+        addTextFieldWithLabel("Arme :", armeField);
+        addTextFieldWithLabel("Année d'expérience :", anneesDeServiceField);
+
+        addTextFieldWithLabel("Nombre d'employé :", nombreEmployeField);
+        addTextFieldWithLabel("Secteur de Gestion :", secteurGestionField);
+        addTextFieldWithLabel("Nombre de Plainte :", nombreDePlainteField);
+        addTextFieldWithLabel("Nombre de Sortie :", nombreDeSortieField);
+        addTextFieldWithLabel("Nombre Victime :", nombreVictimeField);
+
+        addTextFieldWithLabel("Matricule 1 :", matriculeField1);
+        addTextFieldWithLabel("Matricule 2 :", matriculeField2);
+        addTextFieldWithLabel("Matricule 3 :", matriculeField3);
+        addTextFieldWithLabel("Matricule 4 :", matriculeField4);
+        addTextFieldWithLabel("Matricule 5 :", matriculeField5);
+
+        addTextFieldWithLabel("Nombre de Projet :", nombreDeProjetField);
+        addTextFieldWithLabel("Projet 1 :", projetField1);
+        addTextFieldWithLabel("Projet 2 :", projetField2);
+        addTextFieldWithLabel("Projet 3 :", projetField3);
+        addTextFieldWithLabel("Projet Affectation :", projetAffectationField);
+        addTextFieldWithLabel("Titre :", titreField);
+        addTextFieldWithLabel("Spécialité :", specialiteField);
+
+        // Initialiser le modèle de date pour la date de fin d'étude
+        org.jdatepicker.impl.UtilDateModel dateFinDEtudeModel = new org.jdatepicker.impl.UtilDateModel();
+        Properties dateFinDEtudeProperties = new Properties();
+        dateFinDEtudeProperties.put("text.today", "Aujourd'hui");
+        dateFinDEtudeProperties.put("text.month", "Mois");
+        dateFinDEtudeProperties.put("text.year", "Année");
+
+        // Créer le panneau de sélection de date de fin d'étude
+        JDatePanelImpl dateFinDEtudePanel = new JDatePanelImpl(dateFinDEtudeModel, dateFinDEtudeProperties);
+        // Créer le composant de sélection de date de fin d'étude
+        JDatePickerImpl dateFinDEtudePicker = new JDatePickerImpl(dateFinDEtudePanel, new DateComponentFormatter());
+        // Créer le libellé pour la date de fin d'étude
+        JLabel dateFinDEtudeLabel = new JLabel("Date de fin d'étude:");
+        // Stocker le composant de sélection de date de fin d'étude dans une variable
+        JComponent dateFinDEtudePickerComponent = (JComponent) dateFinDEtudePicker;
+
+        // Rendre invisibles les composants de sélection de date de fin d'étude et le libellé associé
+        dateFinDEtudePanel.setVisible(false);
+        dateFinDEtudeLabel.setVisible(false);
+        dateFinDEtudePickerComponent.setVisible(false); // Cacher le composant de sélection de date de fin d'étude
+
+        // Ajouter les composants à votre conteneur (par exemple, un JPanel)
+        add(dateFinDEtudeLabel);
+        add(dateFinDEtudePickerComponent);
+
+        // Initialiser le champ niveauEtudeField
+        addTextFieldWithLabel("Niveau d'étude :", niveauEtudeField);
+        addTextFieldWithLabel("Quart de travail :", quartDeTravailField);
+        addTextFieldWithLabel("Genre de travail :", genreDeTravailField);
+        addTextFieldWithLabel("Nombre de secteur valide :", nombreDeSecteurValideField);
+
+
+        // Définir les propriétés de la fenêtre
+        setSize(800, 600);
+        setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        setLocationRelativeTo(parent);
+        setVisible(true);
+    }
+
+    private void afficherChampsOuvrier() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'afficherChampsOuvrier'");
+    }
+
+    private void afficherChampsIngenieur() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'afficherChampsIngenieur'");
+    }
+
+    private void afficherChampsAdmin() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'afficherChampsAdmin'");
+    }
+
+    private void afficherChampsScientifiques() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'afficherChampsScientifiques'");
+    }
+
+    private void afficherChampsArmee() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'afficherChampsArmee'");
+    }
+
+    private void afficherChampsMilice() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'afficherChampsMilice'");
+    }
+
+    private void afficherChampsGestionnaire() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'afficherChampsGestionnaire'");
+    }
+
+    private void afficherChampsForceSecurite() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'afficherChampsForceSecurite'");
+    }
+
+    private void afficherChampsEmployeMaintenance() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'afficherChampsEmployeMaintenance'");
+    }
+
+    private void addLabelAndTextField(String labelText, JTextField textField) {
+        add(new JLabel(labelText));
+        textField = new JTextField();
+        textField.setForeground(Color.WHITE);
+        textField.setBackground(Color.BLACK);
+        add(textField);
+    }
+
+    private void addLabelAndComponent(String labelText, JComponent component) {
+        add(new JLabel(labelText));
+        add(component);
+    }
+
+    private void addTextFieldWithLabel(String labelText, JTextField textField) {
+        add(new JLabel(labelText));
+        textField = new JTextField();
+        textField.setVisible(false);
+        add(textField);
+    }
+
+    // Ajoutez ici vos méthodes d'affichage de champs spécifiques
+
+}

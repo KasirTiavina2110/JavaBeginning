@@ -1,0 +1,12 @@
+Ouvrier :matricule='OUV3', nom='Garcia', prenom='Carlos', sexe='M', dateDeNaissance=Sat Apr 28 00:00:00 EST 1979, vivant=true, secteur='Secteur3', quartDeTravail=SOIR, genreDeTravail='Travail3', nombreDeSecteurValide=5
+Employe de Maintenance :matricule='EM4', nom='Dubois', prenom='Sophie', sexe='F', dateDeNaissance=Mon May 05 00:00:00 EDT 1980, vivant=true, secteur='Secteur4'
+Ingenieur :specialites=Dynamique des fluides', secteur=Aérospatial', dateFinDetude=Fri Oct 10 00:00:00 EDT 2008', niveauEtude=8', matricule=ING4', nom=Liu', prenom=Yan', sexe=F', dateDeNaissance=Sun May 15 00:00:00 EDT 1983', vivant=true
+Ouvrier :matricule='OUV1', nom='Lefevre', prenom='Sophie', sexe='F', dateDeNaissance=Mon Jun 20 00:00:00 EDT 1983, vivant=true, secteur='Secteur1', quartDeTravail=MATIN, genreDeTravail='Travail1', nombreDeSecteurValide=8
+Employe de Maintenance :matricule='EM1', nom='Martin', prenom='Jean', sexe='M', dateDeNaissance=Sun Mar 10 00:00:00 EST 1985, vivant=true, secteur='Secteur1'
+Ingenieur :specialites=Développement Web', secteur=Informatique', dateFinDetude=Tue Jun 30 00:00:00 EDT 2009', niveauEtude=6', matricule=ING1', nom=Johnson', prenom=Michael', sexe=M', dateDeNaissance=Sat Aug 10 00:00:00 EDT 1985', vivant=true
+Ouvrier :matricule='OUV2', nom='Chang', prenom='Sophie', sexe='F', dateDeNaissance=Fri Nov 14 00:00:00 EST 1986, vivant=true, secteur='Secteur2', quartDeTravail=APRES_MIDI, genreDeTravail='Travail2', nombreDeSecteurValide=4
+Employe de Maintenance :matricule='EM2', nom='Gomez', prenom='Pablo', sexe='M', dateDeNaissance=Tue Jul 28 00:00:00 EDT 1987, vivant=true, secteur='Secteur2'
+Ingenieur :specialites=Ingénierie automobile', secteur=Mécanique', dateFinDetude=Fri May 20 00:00:00 EDT 2011', niveauEtude=6', matricule=ING3', nom=Garcia', prenom=Carlos', sexe=M', dateDeNaissance=Mon Dec 05 00:00:00 EST 1988', vivant=true
+Ingenieur :specialites=Conception de circuits intégrés', secteur=Électronique', dateFinDetude=Sat Sep 15 00:00:00 EDT 2012', niveauEtude=7', matricule=ING2', nom=Chen', prenom=Li', sexe=F', dateDeNaissance=Sun Mar 25 00:00:00 EST 1990', vivant=true
+Ouvrier :matricule='OUV4', nom='Smith', prenom='Alice', sexe='F', dateDeNaissance=Wed Sep 09 00:00:00 EDT 1992, vivant=true, secteur='Secteur4', quartDeTravail=MATIN, genreDeTravail='Travail4', nombreDeSecteurValide=6
+Employe de Maintenance :matricule='EM3', nom='Johnson', prenom='Emily', sexe='F', dateDeNaissance=Fri Nov 12 00:00:00 EST 1993, vivant=true, secteur='Secteur3'
